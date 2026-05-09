@@ -1,53 +1,54 @@
 # DevOps Monitoring Scripts 🖥️
  
-A production-grade Bash toolkit for Linux server health monitoring.
-Built as part of my DevOps/Cloud learning journey.
+Este es un pequeño toolkit en Bash que construí para automatizar el monitoreo de salud de servidores Linux. Lo desarrollé como parte de mi ruta de aprendizaje en DevOps y Cloud, enfocándome en buenas prácticas de scripting y gestión de sistemas.
  
-## Features
+## 🚀 Funcionalidades
  
-- **CPU monitoring**: usage percentage and top 5 processes
-- **Memory monitoring**: RAM usage with configurable thresholds
-- **Disk monitoring**: usage per partition with warnings at 80% and critical at 90%
-- **Network monitoring**: active interfaces, listening ports, connectivity check
-- **Service monitoring**: status of key systemd services
-- **Watch mode**: continuous monitoring with configurable intervals
-- **Report generation**: timestamped reports saved to disk
+- **Monitoreo de CPU**: Porcentaje de uso y el Top 5 de procesos que más consumen.
+- **Gestión de Memoria**: Uso de RAM con alertas configurables (Warn/Crit).
+- **Control de Disco**: Revisión por partición con umbrales de alerta (80% warning / 90% crítico).
+- **Estado de Red**: Interfaces activas, puertos en escucha y prueba rápida de conectividad.
+- **Servicios Críticos**: Chequeo de estado de servicios comunes (Nginx, Docker, SSH, etc.).
+- **Modo "Watch"**: Monitoreo continuo con intervalos personalizables.
+- **Reportes Automáticos**: Genera archivos `.txt` con fecha y hora para auditoría.
  
-## Usage
+## 🛠️ Cómo usarlo
+ 
+Primero asegúrate de darle permisos de ejecución:
+```bash
+chmod +x server-health.sh
+```
+
+Luego puedes correrlo de distintas formas:
  
 ```bash
-# Single health report
+# Generar un reporte único
 ./server-health.sh
  
-# Watch mode (refresh every 60 seconds)
+# Modo monitoreo (se actualiza cada 60 segundos)
 ./server-health.sh --watch
  
-# Custom interval and output directory
-./server-health.sh --watch --interval 30 --output /var/log/monitoring
+# Personalizar intervalo y carpeta de salida
+./server-health.sh --watch --interval 30 --output ./mis_reportes
 ```
  
-## Technologies Used
+## 🧠 ¿Qué aprendí con este proyecto?
  
-- Bash scripting (set -euo pipefail, trap, functions, arrays)
-- Linux system commands (ps, ss, df, du, ip, systemctl)
-- Text processing (awk, grep, sed)
+Este fue mi primer paso sólido en la fase 1 de mi roadmap DevOps:
+- Dominio de permisos, procesos y gestión de sistemas de archivos en Linux.
+- Scripting "profesional": uso de `set -euo pipefail`, manejo de errores y modularidad.
+- Diagnóstico de redes y gestión de puertos desde la terminal.
+- Diseño de herramientas pensadas para producción (no solo un script que imprime texto, sino algo útil y robusto).
  
-## What I Learned
+## 🧪 Pruebas
  
-This project covers Phase 1 of my DevOps roadmap:
-- Linux permissions, processes, and filesystem management
-- Bash scripting best practices (error handling, modular design)
-- Network diagnostics and port management
-- Production-grade script design patterns
- 
-## Running Tests
+Incluí una suite de tests básica para asegurar que todo funcione después de cada cambio:
  
 ```bash
 chmod +x tests/test-health.sh
 ./tests/test-health.sh
 ```
  
-## Author
- 
-Kamila Opazo — Cloud/DevOps Engineer in training
-GitHub: [kamila2021](https://github.com/kamila2021)
+---
+**Autor:** Kamila Opazo — Cloud/DevOps Engineer en formación
+**GitHub:** [kamila2021](https://github.com/kamila2021)
