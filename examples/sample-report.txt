@@ -1,0 +1,54 @@
+==============================================
+   REPORTE DE SALUD DEL SERVIDOR
+   Sat May  9 23:46:26 UTC 2026
+==============================================
+
+[0;34m[1m=== INFORMACIÓN DEL SISTEMA ===[0m
+  Hostname:    d91a908ddcdd
+  OS:          Ubuntu 24.04.4 LTS
+  Kernel:      6.10.14-linuxkit
+  Uptime:      up 2 hours, 23 minutes
+  Fecha/Hora:  Sat May  9 23:46:26 UTC 2026
+
+[0;34m[1m=== CPU ===[0m
+  Uso de CPU: 0%
+  Load Average: 0.25 0.15 0.13
+  Top 5 procesos por CPU:
+    root         0.0% bash
+    root         0.0% /bin/bash
+    root         0.0% /bin/bash
+    root         0.0% /bin/bash
+    root         0.0% tee
+
+[0;34m[1m=== MEMORIA RAM ===[0m
+  Total:    7837MB
+  Usado:    799MB (10%)
+  Libre:    5007MB
+  Top 5 procesos por memoria:
+    root         0.0% ps
+    root         0.0% /bin/bash
+    root         0.0% bash
+    root         0.0% /bin/bash
+    root         0.0% /bin/bash
+
+[0;34m[1m=== DISCO ===[0m
+  Uso por partición:
+    /                      6% usado (49G de 1007G)
+    /dev/shm               0% usado (0 de 64M)
+    /etc/hosts             6% usado (49G de 1007G)
+  Top 5 más grandes en /var:
+    72M	/var/lib
+    1.7M	/var/cache
+    388K	/var/log
+    4.0K	/var/tmp
+    4.0K	/var/spool
+
+[0;34m[1m=== RED ===[0m
+  Interfaces activas:
+    eth0	172.17.0.2/16
+  Puertos en escucha:
+  Conectividad a internet: [0;32mOK[0m
+
+[0;34m[1m=== SERVICIOS SYSTEMD ===[0m
+
+  Reporte guardado en: /tmp/examples/health-20260509_234626.txt
